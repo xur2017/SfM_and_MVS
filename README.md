@@ -1,7 +1,7 @@
 # Reconstruction through SfM and MVS given Unstructured RGB Images
 Reconstruction from a set of unstructured RGB images traditionally first recovers a sparse representation of the scene and the camera poses of the input images using Structure-from-Motion (SfM). This output then serves as the input to Multi-View Stereo (MVS) to recover a dense representation of the scene.
 ## Spare Modeling (through Structure-from-Motion)
-Structure-from-Motion (SfM) is the process of reconstructing 3D structure from its projections into a series of images. The input is a set of overlapping images of the same object, taken from different viewpoints. The output is a 3-D reconstruction of the object, and the reconstructed intrinsic and extrinsic camera parameters of all images. Typically, Structure-from-Motion systems divide this process into three stages:
+Structure-from-Motion (SfM) is the process of reconstructing 3D structure from its projections into a series of images. The input is a set of overlapping images of the same object, taken from different viewpoints. The output is a 3-D reconstruction of the object, and the reconstructed intrinsic and extrinsic camera parameters of all images (intrinsic camera parameters also can be shared by all images, if they are captured by single camera). Typically, Structure-from-Motion systems divide this process into three stages:
 * Feature detection and extraction
 * Feature matching and geometric verification
 * Structure and motion reconstruction
