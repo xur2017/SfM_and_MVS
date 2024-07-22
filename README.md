@@ -8,10 +8,9 @@ Structure-from-Motion (SfM) is the process of reconstructing 3D structure from i
 
 <img src="pics/80.png" height=200px />
 <img src="pics/90.png" height=200px />
-<img src="pics/30.png" height=200px />
 <img src="pics/70.png" height=200px />
 
-In the first step, feature detection and extraction finds sparse feature points in the image and describes their appearance using a numerical descriptor. In the second step, feature matching and geometric verification finds correspondences between the feature points in different images. For the feature points, if we are not able to find correspondences and determine 3D points, then we mark them with red color as are illustrated in the above two images.
+In the first step, the feature detection and feature extraction process finds sparse feature points in the image and describes their appearance using a numerical descriptor. In the second step, the feature matching and geometric verification process finds correspondences between the feature points in different images. For the feature points, if we are not able to find correspondences and determine 3D points, then we mark them with red color as are illustrated in the above two images.
 
 <img src="pics/recon1.png" height=250px />
 
@@ -23,7 +22,7 @@ After reconstructing a sparse representation of the scene and the camera poses o
 * Depth (and normal) estimation
 * Fusion
 
-The first step is to undistort the images (for image undistortion, camera intrinsic parameters including focal length, distortion coefficients, etc. are already estimated in the SfM step). Given the undistorted images and undistorted cameras, the second step is to compute the depth (and normal) maps for all the registered and undistorted images using stereo. The third step is to fuse the depth (and normal) maps to a dense point cloud. Within the dense directory, the images folder contains the undistorted images, and the sparse folder contains the sparse reconstruction with undistorted cameras, the stereo folder contains the stereo reconstruction results. The fused point cloud (fused.ply) can be visualized with an external viewer such as Meshlab.
+The first step is to undistort the images (for image undistortion, intrinsic camera parameters including focal length, distortion coefficients are already reconstructed or estimated in the SfM step). Given the undistorted images and undistorted cameras, the second step is to compute the depth (and normal) maps for all the registered and undistorted images using stereo. The third step is to fuse the depth (and normal) maps to a dense point cloud. Within the dense directory, the images folder contains the undistorted images, and the sparse folder contains the sparse reconstruction with undistorted cameras, the stereo folder contains the stereo reconstruction results. The fused point cloud (fused.ply) can be visualized with an external viewer such as Meshlab.
 
 <img src="pics/recon2.png" height=250px />
 
